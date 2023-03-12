@@ -1,0 +1,28 @@
+body {
+    background-color: black;
+}
+
+#cursor {
+    font-size: 30px;
+    color: white;
+  }
+
+#welcome {
+    color: white;
+    text-align: center;
+}
+
+#backimagewrap {
+    overflow: hidden;
+    position: relative;
+}
+  
+#backimage {
+    z-index: -1;
+    opacity: .4;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
