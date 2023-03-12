@@ -1,5 +1,8 @@
 body {
     background-color: black;
+    width: auto;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #cursor {
