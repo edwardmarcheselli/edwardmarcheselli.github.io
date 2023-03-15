@@ -1,8 +1,46 @@
 body {
-    background-color: black;
+    background-color: #212529;
     width: auto;
-    height: 100vh;
+    height: 200vh;
+/*     background-image:url(nighthawks.jpg);
+    background-repeat:no-repeat;
+    background-size:cover; */
     overflow: hidden;
+}
+.siteText {
+    font-family: Helvetica, sans-serif;
+}
+
+#nameLogoSize {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+#logoDot {
+    position: absolute;
+    bottom: 0;
+    color: #40AEF2
+}
+
+.menuSize {
+    font-size: 24px;
+}
+
+.iconNavColor {
+    color: white;
+}
+
+/* @media only screen and (min-width: 992px) {
+    #lastNav {
+        border-right: 1px solid grey;
+    }
+} */
+
+#namePeriod {
+    font-size: 48px;
+    color: #40AEF2;
+    position: absolute;
+    bottom: 0;
 }
 
 #cursor {
@@ -28,4 +66,31 @@ body {
     top: 0;
     width: 100%;
     height: auto;
+}
+
+#fullscreen {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    height: 70vh;
+}
+
+#slide {
+    width: 50%;
+    height: inherit;
+    opacity: 0;
+    transform: translate3d(-10vw, 0, 0);
+    transition: 0.5s all ease-in-out;
+    
+}
+
+#slide.fade {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+#slide img {
+    width: inherit;
 }
