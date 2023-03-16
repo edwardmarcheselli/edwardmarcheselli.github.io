@@ -16,41 +16,41 @@ setTimeout(() => {
 }, 1000);
 
 window.onwheel = function(e) {
-  if (e.deltaY > 10 && scrollEnabled == true && slideDisp.counter < 5) {
+  if (e.deltaY > 20 && scrollEnabled == true && slideDisp.counter < 3) {
     console.log('reveal');
     scrollEnabled = false;
     slidechange()
     slideDisp.counter += 1;
-    setTimeout(() => {
+    scrollEnabled = true;
+    /* setTimeout(() => {
       scrollEnabled = true;
-    }, 1000);
+    }, 500); */
   }
-  if (e.deltaY < -10 && scrollEnabled == true && slideDisp.counter > 0) {
+  if (e.deltaY < -20 && scrollEnabled == true && slideDisp.counter > 0) {
     console.log('reverse reveal');
     scrollEnabled = false;
     slidechange()
     slideDisp.counter -= 1;
-    setTimeout(() => {
+    scrollEnabled = true;
+    /* setTimeout(() => {
       scrollEnabled = true;
-    }, 1000);
+    }, 500); */
   }
 }
 
 function slidechange() {
   switch (slideDisp.counter) {
     case 1:
-      slideDisp.innerHTML = 
-        '<img src="Headshot-2020 (3).jpg">'
-      ;
-      slideDisp.classList.toggle('fade');
+      $(() => {$("#slide").load("intro.html")})
       console.log(slideDisp.counter)
       break;
     case 2:
-      slideDisp.innerHTML = '';
+      $(() => {$("#slide").load("about.html")})
+      //slideDisp.classList.toggle('fade');
       console.log(slideDisp.counter)
       break;
     case 3:
-      slideDisp.innerHTML = '';
+      $(() => {$("#slide").load("projects.html")})
       console.log(slideDisp.counter)
       break;
     case 4:
