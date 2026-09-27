@@ -1,62 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Edward Marcheselli</title>
-</head>
-<body>
-  <div class="container d-none d-lg-block">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand siteText" id="nameLogoSize"href="#" onclick="pagechange(1)">EM<span id="logoDot">&#x2022</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto align-items-center">
-            <a class="nav-link active menuSize siteText" id="projectLink" aria-current="page" href="Edward A. Marcheselli Resume - 2023.pdf">Resume</a>
-            <a class="nav-link active menuSize siteText" id="projectLink" aria-current="page" href="#" onclick="pagechange(2)">Projects</a>
-            <!-- <a class="nav-link active menuSize siteText" id="experienceLink" aria-current="page" href="#" onclick="pagechange(3)">Experience</a> -->
-            <!-- <a class="nav-link active menuSize siteText" id="aboutLink" aria-current="page" href="#" onclick="pagechange(4)">About</a> -->
-            <a class="nav-link disabled menuSize siteText text-white" aria-current="page" href="#">|</a>
-            <a class="nav-link active menuSize" aria-current="page" href="https://github.com/edwardmarcheselli/"><i class="bi bi-github"></i></a>
-            <a class="nav-link active menuSize" aria-current="page" href="https://www.linkedin.com/in/edward-a-marcheselli/"><i class="bi bi-linkedin"></i></a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-  <div class="container d-block d-lg-none">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <a class="navbar-brand siteText" id="nameLogoSize"href="#" onclick="pagechange(1)">EM</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav ms-auto align-items-center">
-            <a class="nav-link active menuSize siteText" id="projectLink" aria-current="page" href="Edward A. Marcheselli Resume - 2023.pdf">Resume</a>
-            <a class="nav-link active menuSize siteText" id="projectLink" aria-current="page" href="#" onclick="pagechange(2)">Projects</a>
-            <!-- <a class="nav-link active menuSize siteText" id="experienceLink" aria-current="page" href="#" onclick="pagechange(3)">Experience</a>
-            <a class="nav-link active menuSize siteText" id="aboutLink" aria-current="page" href="#" onclick="pagechange(4)">About</a> -->
-            <a class="nav-link active menuSize" aria-current="page" href="https://github.com/edwardmarcheselli/">Github</a>
-            <a class="nav-link active menuSize" aria-current="page" href="https://www.linkedin.com/in/edward-a-marcheselli/">Linkedin</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </div>
-  <div id="slide" class="">
 
-  </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Edward A. Marcheselli is an engineering software leader specializing in real-time systems, embedded software, and technical web applications.">
+  <title>Edward Marcheselli | Engineering Software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="site-shell header-inner">
+      <a class="wordmark" href="#top" aria-label="Edward Marcheselli, back to top">EM<span>.</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <span class="sr-only">Toggle navigation</span><i data-lucide="menu" aria-hidden="true"></i>
+      </button>
+      <nav id="site-navigation" class="site-navigation" aria-label="Primary navigation">
+        <a href="#work">Work</a><a href="#experience">Experience</a><a href="#capabilities">Capabilities</a><a
+          href="#contact">Contact</a>
+        <a class="nav-external" href="https://github.com/edwardmarcheselli" target="_blank" rel="noreferrer">GitHub <i
+            data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main-content">
+    <section id="top" class="hero section">
+      <div class="site-shell hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span></span> Engineering software leader</p>
+          <h1>Edward Marcheselli</h1>
+          <p class="hero-role">Engineering software for systems that have to work.</p>
+          <p class="hero-summary">
+            I lead teams and build technical software spanning real-time
+            simulation, embedded control, robotics, and internal engineering
+            tools.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">View selected work
+              <i data-lucide="arrow-down" aria-hidden="true"></i></a><a class="text-link"
+              href="https://www.linkedin.com/in/edward-a-marcheselli/" target="_blank" rel="noreferrer">Connect on LinkedIn
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <aside class="hero-specification reveal" aria-label="Professional profile">
+          <div class="specification-topline">
+            <span>PROFILE_01</span><span>2026</span>
+          </div>
+          <div class="specification-mark" aria-hidden="true">
+            <span>01</span><i data-lucide="cpu"></i>
+          </div>
+          <dl>
+            <div>
+              <dt>Current role</dt>
+              <dd>Functional Team Owner / Manager</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Engineering software systems</dd>
+            </div>
+            <div>
+              <dt>Domains</dt>
+              <dd>Embedded, real-time, web</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+      <div class="site-shell hero-signal" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </section>
+    <section id="work" class="section section-work">
+      <div class="site-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Selected work</p>
+          <h2>Software shaped by engineering constraints.</h2>
+          <p>
+            Recent public work across technical interfaces, 3D interaction,
+            automation, and operational software.
+          </p>
+        </div>
+        <div class="project-grid">
+          <article class="project-card project-card-featured reveal">
+            <div class="project-visual cad-visual" role="img"
+              aria-label="Technical visual representing a CAD assembly workspace">
+              <div class="cad-toolbar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="cad-tree">
+                <span></span><span></span><span></span><span></span>
+              </div>
+              <div class="cad-assembly">
+                <span class="assembly-cube cube-one"></span><span class="assembly-cube cube-two"></span><span
+                  class="assembly-axis axis-x"></span><span class="assembly-axis axis-y"></span>
+              </div>
+              <div class="cad-dock"><span></span><span></span></div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span>01 / Technical interface</span><span>2026</span>
+              </div>
+              <h3>CAD Workspace</h3>
+              <p>
+                A browser-based CAD assembly workspace that combines a
+                drag-and-drop part tree, contextual editing tools, and
+                interactive Three.js rendering.
+              </p>
+              <ul class="tag-list" aria-label="Technology used">
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>Three.js</li>
+                <li>Vite</li>
+              </ul>
+              <a class="project-link" href="https://github.com/edwardmarcheselli/CAD_Workspace_Typescript_React_Demo"
+                target="_blank" rel="noreferrer">View repository
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="project-card project-card-featured reveal">
+            <div class="project-visual nxt-visual" role="img"
+              aria-label="Illustrative terminal output from the NXT robot's Ollama Llama 3.2 agent">
+              <div class="nxt-terminal">
+                <span class="terminal-heading">NXT / OLLAMA AGENT</span><span class="terminal-command">$ python
+                  agent.py</span><span>[Agent] Clear path (82cm), rolling forward...</span><span>[Ollama] llama3.2
+                  response received</span><span class="terminal-json">{ "thought": "Open corridor ahead!",</span><span
+                  class="terminal-json"> "droid_mood": "excited",</span><span class="terminal-json">
+                  "action": { "type": "drive_forward",</span><span class="terminal-json">
+                  "speed": 75, "duration_sec": 2.2 } }</span><span>[R2-D4 | EXCITED] "Adventure awaits!"</span><span
+                  class="terminal-action">-&gt; Action: drive_forward @ 75% for 2.2s</span><span
+                  class="terminal-cursor">_</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span>02 / Agentic robotics</span><span>2026</span>
+              </div>
+              <h3>NXT Autonomous Robot</h3>
+              <p>
+                A Python controller that combines LEGO NXT hardware,
+                ultrasonic telemetry, and local Ollama reasoning to choose
+                safety-aware exploration actions.
+              </p>
+              <ul class="tag-list" aria-label="Technology used">
+                <li>Python</li>
+                <li>Ollama</li>
+                <li>Llama 3.2</li>
+                <li>Lua</li>
+              </ul>
+              <a class="project-link" href="https://github.com/edwardmarcheselli/nxt_lua_auto_robo" target="_blank"
+                rel="noreferrer">View repository
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <img class="project-image" src="images/flocks-financial-planner.png"
+              alt="Flocks visual financial planner showing connected financial blocks and a scenario timeline">
+            <div class="project-content">
+              <div class="project-meta">
+                <span>03 / Financial planning</span><span>2026</span>
+              </div>
+              <h3>Flocks</h3>
+              <p>
+                A visual financial planning experience for connecting income,
+                assets, debt, and expenses into scenario simulations with
+                timeline playback and snapshots.
+              </p>
+              <ul class="tag-list" aria-label="Product capabilities">
+                <li>Financial planning</li>
+                <li>Scenarios</li>
+                <li>Simulation</li>
+                <li>Visualization</li>
+              </ul>
+              <a class="project-link" href="https://flocksfinance.com/" target="_blank" rel="noreferrer">Visit Flocks
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+          <article class="project-card reveal">
+            <img class="project-image" src="images/Real%20Time%20Bus%20Tracker%20-%20Screenshot.png"
+              alt="Screenshot of a real-time Boston bus tracker map">
+            <div class="project-content">
+              <div class="project-meta">
+                <span>04 / Real-time data</span><span>2023</span>
+              </div>
+              <h3>Real-Time Bus Tracker</h3>
+              <p>
+                A map-based JavaScript application that consumes Boston
+                transit data to visualize vehicle locations in real time.
+              </p>
+              <ul class="tag-list" aria-label="Technology used">
+                <li>JavaScript</li>
+                <li>Maps API</li>
+                <li>Data visualization</li>
+              </ul>
+              <a class="project-link" href="https://github.com/edwardmarcheselli/real-time-bus-tracker" target="_blank"
+                rel="noreferrer">View repository
+                <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section id="experience" class="section section-experience">
+      <div class="site-shell two-column-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Leadership rooted in technical depth.</h2>
+          <p>
+            From field deployment to low-level control, I work comfortably
+            where software meets physical systems.
+          </p>
+        </div>
+        <ol class="experience-list">
+          <li class="reveal">
+            <div class="experience-date">Aug 2026 - Present</div>
+            <div class="experience-detail">
+              <p class="experience-company">
+                Williams International <span>Pontiac, MI</span>
+              </p>
+              <h3>Functional Team Owner / Manager</h3>
+              <p>
+                Manage a three-person internal software web development team,
+                partnering with engineering groups on custom applications,
+                developer tools, and tailored workflow pipelines. Direct
+                sprint planning, release visibility, and resource allocation.
+              </p>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="experience-date">Sep 2025 - Aug 2026</div>
+            <div class="experience-detail">
+              <p class="experience-company">
+                Williams International <span>Pontiac, MI</span>
+              </p>
+              <h3>Lead Software Engineer</h3>
+              <p>
+                Architected a high-fidelity Linux hardware-in-the-loop engine
+                simulator and diagnostic suite with a modular React interface
+                and industrial communication protocols including CAN, Modbus,
+                and OPC UA.
+              </p>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="experience-date">Oct 2023 - Oct 2025</div>
+            <div class="experience-detail">
+              <p class="experience-company">
+                Williams International <span>Pontiac, MI</span>
+              </p>
+              <h3>Senior Software Engineer</h3>
+              <p>
+                Developed bare-metal motor-control firmware and core UAV
+                systems spanning ARM and PowerPC architectures, sensor
+                interfaces, telemetry, maintenance tooling, and real-time
+                communications.
+              </p>
+            </div>
+          </li>
+          <li class="reveal">
+            <div class="experience-date">Oct 2021 - Oct 2023</div>
+            <div class="experience-detail">
+              <p class="experience-company">
+                Toyota Advanced Logistics <span>Greenfield, IN</span>
+              </p>
+              <h3>Robotics &amp; Automation Project Engineer II</h3>
+              <p>
+                Led product engineering and field deployment for large-scale
+                warehouse automation programs, integrating motion control,
+                motor drives, optical sensors, software validation, and
+                on-site commissioning.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section id="capabilities" class="section section-capabilities">
+      <div class="site-shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Capabilities</p>
+          <h2>A practical stack for connected engineering systems.</h2>
+          <p>
+            Technologies used confidently across embedded systems, connected
+            devices, engineering applications, and industrial automation.
+          </p>
+        </div>
+        <div class="capability-grid">
+          <article class="capability reveal">
+            <span>01</span>
+            <h3>Firmware</h3>
+            <p class="capability-label">Tools</p>
+            <ul class="capability-tags" aria-label="Firmware tools">
+              <li>C</li>
+              <li>ARM</li>
+              <li>PowerPC</li>
+              <li>CAN</li>
+              <li>Modbus</li>
+              <li>SPI</li>
+              <li>I2C</li>
+              <li>UART</li>
+              <li>RS422</li>
+              <li>TCP/IP</li>
+              <li>OPC UA</li>
+              <li>UDP</li>
+              <li>JTAG/SWD</li>
+              <li>Oscilloscope Debugging</li>
+              <li>Logic analyzer</li>
+            </ul>
+          </article>
+          <article class="capability reveal">
+            <span>02</span>
+            <h3>Real-Time Systems</h3>
+            <p class="capability-label">Tools</p>
+            <ul class="capability-tags" aria-label="Real-time systems tools">
+              <li>Real-Time Linux</li>
+              <li>Zephyr</li>
+              <li>HIL simulation</li>
+              <li>Multithreading</li>
+              <li>IBM DOORS</li>
+              <li>Requirements traceability</li>
+              <li>DO-178C</li>
+            </ul>
+          </article>
+          <article class="capability reveal">
+            <span>03</span>
+            <h3>Web Development</h3>
+            <p class="capability-label">Tools</p>
+            <ul class="capability-tags" aria-label="Web development tools">
+              <li>TypeScript</li>
+              <li>JavaScript</li>
+              <li>Python</li>
+              <li>React</li>
+              <li>.NET</li>
+              <li>Django</li>
+              <li>PostgreSQL</li>
+              <li>Next.js</li>
+              <li>Vite</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>REST APIs</li>
+              <li>GraphQL</li>
+              <li>MongoDB</li>
+              <li>SQL Server</li>
+              <li>Responsive UI</li>
+              <li>Docker</li>
+              <li>GitHub CI/CD</li>
+            </ul>
+          </article>
+          <article class="capability reveal">
+            <span>04</span>
+            <h3>Automation</h3>
+            <p class="capability-label">Tools</p>
+            <ul class="capability-tags" aria-label="Automation tools">
+              <li>AGVs/AMRs</li>
+              <li>ASRS</li>
+              <li>Motion control</li>
+              <li>Motor control</li>
+              <li>Motor drives</li>
+              <li>Optical sensors</li>
+              <li>Sensor/actuator integration</li>
+              <li>Field commissioning</li>
+              <li>Automation validation</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section section-credentials">
+      <div class="site-shell credentials-grid">
+        <div class="credential-block reveal">
+          <p class="eyebrow">Education</p>
+          <h2>Georgia Institute of Technology</h2>
+          <p>
+            Master of Science, Computer Science<br>Computational Perception
+            &amp; Robotics, remote
+          </p>
+          <span>Jan 2026 - Present</span>
+          <h2>Purdue University</h2>
+          <p>
+            Bachelor of Science, Mechanical Engineering<br>Minor in
+            Psychology
+          </p>
+          <span>May 2021 | Senior Design Competition, 1st Place</span>
+        </div>
+        <div class="credential-block reveal">
+          <p class="eyebrow">Credentials</p>
+          <ul class="credential-list">
+            <li>
+              <a href="https://continuumuw.badges.parchment.com/public/shared-recipient-progress/rhUiLYdfnb3P"
+                target="_blank" rel="noreferrer"
+                aria-label="Verify Embedded and Real Time Systems Programming credential from the University of Washington"><strong>Embedded
+                  and Real Time Systems Programming</strong><i data-lucide="arrow-up-right"
+                  aria-hidden="true"></i></a><span>University of Washington, June 2026</span>
+            </li>
+            <li>
+              <a href="https://certificates.emeritus.org/627ecb2f-d622-4b57-816f-53ac4a05bf5a" target="_blank"
+                rel="noreferrer"
+                aria-label="Verify Full Stack Development with MERN credential from Emeritus"><strong>Full Stack
+                  Development with MERN</strong><i data-lucide="arrow-up-right"
+                  aria-hidden="true"></i></a><span>Massachusetts Institute of Technology, Nov. 2023</span>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/edward-a-marcheselli/details/certifications/" target="_blank"
+                rel="noreferrer"
+                aria-label="View Fundamentals of Engineering credential on LinkedIn"><strong>Fundamentals of
+                  Engineering</strong><i data-lucide="arrow-up-right" aria-hidden="true"></i></a><span>NCEES, Aug.
+                2021</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="section contact-section">
+      <div class="site-shell contact-inner reveal">
+        <p class="eyebrow">Available for the next technical challenge</p>
+        <h2>Let's connect.</h2>
+        <a class="contact-email" href="https://www.linkedin.com/in/edward-a-marcheselli/" target="_blank" rel="noreferrer">Connect on LinkedIn
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-shell footer-inner">
+      <p>Edward A. Marcheselli <span id="current-year"></span></p>
+      <div>
+        <a href="https://github.com/edwardmarcheselli" target="_blank" rel="noreferrer">GitHub</a><a
+          href="https://www.linkedin.com/in/edward-a-marcheselli/" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="main.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="main.js"></script>
+
 </html>

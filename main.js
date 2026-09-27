@@ -1,71 +1,55 @@
-/* var typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
-    typeSpeed: 50,
-    showCursor: false
-  }); */
+const menuToggle = document.querySelector('.menu-toggle');
+const navigation = document.querySelector('.site-navigation');
+const navigationLinks = [...document.querySelectorAll('.site-navigation a[href^="#"]')];
+const sections = navigationLinks
+  .map((link) => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
 
-var fadecounter = 0;
-var scrollEnabled = true;
-var slideDisp = document.getElementById('slide')
-slideDisp.counter = 1;
-slidechange()
+document.getElementById('current-year').textContent = new Date().getFullYear();
 
-function pagechange(x) {
-  slideDisp.counter = x;
-  slidechange();
+function closeMenu() {
+  navigation.classList.remove('is-open');
+  document.body.classList.remove('menu-open');
+  menuToggle.setAttribute('aria-expanded', 'false');
 }
 
-// setTimeout(() => {
-//     slideDisp.counter += 1;
-//     slidechange();
-//     console.log(slideDisp.counter)
-// }, 1000);
+menuToggle.addEventListener('click', () => {
+  const isOpen = navigation.classList.toggle('is-open');
+  document.body.classList.toggle('menu-open', isOpen);
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+});
 
-// window.onwheel = function(e) {
-//   if (e.deltaY > 20 && scrollEnabled == true && slideDisp.counter < 3) {
-//     console.log('reveal');
-//     scrollEnabled = false;
-//     slidechange()
-//     slideDisp.counter += 1;
-//     scrollEnabled = true;
-//     /* setTimeout(() => {
-//       scrollEnabled = true;
-//     }, 500); */
-//   }
-//   if (e.deltaY < -20 && scrollEnabled == true && slideDisp.counter > 0) {
-//     console.log('reverse reveal');
-//     scrollEnabled = false;
-//     slidechange()
-//     slideDisp.counter -= 1;
-//     scrollEnabled = true;
-//     /* setTimeout(() => {
-//       scrollEnabled = true;
-//     }, 500); */
-//   }
-// }
+navigationLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
-function slidechange() {
-  switch (slideDisp.counter) {
-    case 1:
-      $(() => {$("#slide").load("intro.html")});
-      console.log(slideDisp.counter);
-      break;
-    case 2:
-      $(() => {$("#slide").load("projects.html")});
-      //slideDisp.classList.toggle('fade');
-      console.log(slideDisp.counter);
-      break;
-    case 3:
-      $(() => {$("#slide").load("experience.html")});
-      console.log(slideDisp.counter);
-      break;
-    case 4:
-      $(() => {$("#slide").load("about.html")});
-      console.log(slideDisp.counter);
-      break;
-    case 5:
-      slideDisp.innerHTML = '';
-      console.log(slideDisp.counter);
-      break;
-  }
+if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    }),
+    { threshold: 0.12 }
+  );
+
+  document.querySelectorAll('.reveal').forEach((element) => revealObserver.observe(element));
+} else {
+  document.querySelectorAll('.reveal').forEach((element) => element.classList.add('is-visible'));
 }
+
+const activeLinkObserver = new IntersectionObserver(
+  (entries) => entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navigationLinks.forEach((link) => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+      });
+    }
+  }),
+  { rootMargin: '-35% 0px -58% 0px', threshold: 0 }
+);
+
+sections.forEach((section) => activeLinkObserver.observe(section));
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 620) closeMenu();
+});
